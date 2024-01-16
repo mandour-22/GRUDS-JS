@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1565c0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0d47a1;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  .crud {
+    width: 80%;
+    margin: 0 auto;
+    .head {
+      text-transform: uppercase;
+      text-align: center;
+      margin: 10px 0;
+      h1 {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+      p {
+        margin: 0.3125rem;
+      }
+    }
+    .inputs {
+      input {
+        width: 100%;
+        height: 1.875rem;
+        outline: none;
+        border: 1px solid #ccccccbf;
+        background-color: #fff;
+        margin: 0.25rem 0;
+        border-radius: 0.25rem;
+        transition: 0.1s;
+        &:focus {
+          border: 1px solid #ccc;
+          background-color: #cccccc0f;
+          scale: 1.01;
+        }
+      }
+      .price {
+        input {
+          width: 20%;
+        }
+        #total {
+          background-color: #f02727;
+          color: #fff;
+          padding: 3px 10px;
+          border-radius: 4px;
+          &::before {
+            content: "Total : ";
+          }
+        }
+      }
+      #submit {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        color: #fff;
+        background-color: #1565c0b3;
+        padding: 7px;
+        margin: 10px 0;
+        border-radius: 4px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: 0.2s;
+        &:hover {
+          background-color: #0d47a1;
+        }
+      }
+    }
+    .outputs {
+      .searchBlock {
+        #search {
+          width: 100%;
+          height: 1.875rem;
+          outline: none;
+          border: 1px solid #ccccccbf;
+          background-color: #fff;
+          margin: 0.25rem 0;
+          border-radius: 0.25rem;
+          transition: 0.5s;
+          &:focus {
+            border: 1px solid #ccc;
+            background-color: #cccccc0f;
+            scale: 1.01;
+          }
+        }
+        .btnSearch {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.625rem;
+          button {
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            color: #fff;
+            background-color: #1565c0;
+            padding: 7px;
+            margin: 5px 0;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.2s;
+            &:hover {
+              background-color: #0d47a1;
+            }
+          }
+        }
+      }
+    }
+    .deleteAll {
+      width: 100%;
+      border: none;
+      color: #fff;
+      background-color: #1565c0;
+      padding: 7px;
+      margin: 5px 0;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s;
+      text-align: center;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #0d47a1;
+      }
+    }
+  }
+}
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  tr {
+    margin: 10px 0;
+  }
+  .update {
+    background-color: #fff;
+    border: 1px solid #ffc107;
+    color: #ffc107;
+    padding: 7px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: 0.2s;
+    &:hover {
+      background-color: #ffc107;
+      color: #fff;
+    }
+  }
+  .delete {
+    background-color: #fff;
+    border: 1px solid #f02727;
+    color: #f02727;
+    padding: 7px 15px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: 0.2s;
+    &:hover {
+      background-color: #f02727;
+      color: #fff;
+    }
+  }
+}
+input {
+  padding: 0.9375rem 0.5rem;
+  height: 2.3rem;
+}
+
+@media (max-width: 48rem) {
+  .crud {
+    width: 95% !important;
+    .inputs {
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+    .btnSearch {
+      flex-direction: column;
+      margin: 5px 0;
+    }
+    .parent-table {
+      overflow-x: auto;
+      table {
+        width: 100%;
+      }
+    }
+  }
+}
